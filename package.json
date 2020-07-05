@@ -6,12 +6,14 @@
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server",
     "build": "./node_modules/.bin/webpack -p",
-    "watch": "./node_modules/.bin/webpack --watch"
+    "watch": "./node_modules/.bin/webpack --watch",
+    "analyze": "./node_modules/.bin/webpack-bundle-analyzer"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.10.4",
     "babel-core": "~6.26.0",
     "babel-loader": "~7.1.2",
     "babel-preset-env": "~1.6.0",
@@ -25,14 +27,17 @@
     "sass-loader": "~6.0.6",
     "style-loader": "~0.18.2",
     "webpack": "~3.6.0",
+    "webpack-bundle-analyzer": "^3.8.0",
     "webpack-dev-server": "~2.9.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.10.4",
     "babel-polyfill": "^6.26.0",
     "bulma": "^0.7.1",
     "bulma-start": "^0.0.2",
     "bulma-timeline": "^2.0.3",
     "cash-dom": "^2.1.7",
+    "dayjs": "^1.8.29",
     "whatwg-fetch": "^3.1.0"
   }
 }
