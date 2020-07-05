@@ -3,6 +3,9 @@ import $ from 'cash-dom';
 
 
 export class App {
+  constructor() {
+    this.initializeApp = this.initializeApp.bind(this)
+  }
   initializeApp() {
     let self = this;
 
@@ -10,8 +13,8 @@ export class App {
       let userName = $('.username.input').val();
 
       fetch('https://api.github.com/users/' + userName)
-        .then((response)=> {response.json})
-        .then(function (body) {
+        .then((response)=> response.json())
+        .then((body) => {
           self.profile = body;
           self.update_profile();
         })
