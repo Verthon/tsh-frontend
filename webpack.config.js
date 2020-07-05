@@ -2,7 +2,8 @@ const path = require('path'),
   webpack = require('webpack'),
   CleanWebpackPlugin = require('clean-webpack-plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin');
+  ExtractTextPlugin = require('extract-text-webpack-plugin'),
+  BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const extractPlugin = new ExtractTextPlugin({filename: './assets/css/app.css'});
 
@@ -80,6 +81,7 @@ const config = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({template: 'index.html'}),
+    new BundleAnalyzerPlugin(),
     extractPlugin
   ],
 
@@ -90,8 +92,6 @@ const config = {
     stats: 'errors-only',
     open: true
   },
-
-  devtool: 'inline-source-map'
 
 };
 
