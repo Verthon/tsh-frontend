@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "useBuiltIns": "entry",
+        "targets": {
+          "browsers": [
+            "chrome >= 61",
+            "edge >= 15",
+            "firefox >= 52",
+            "ie >= 11"
+          ]
+        }
+      }
+    ]
+  ]
+}

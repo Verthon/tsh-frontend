@@ -11,6 +11,7 @@ const config = {
   context: path.resolve(__dirname, 'src'),
 
   entry: {
+    polyfills: './polyfills.js',
     app: './index.js'
   },
 
